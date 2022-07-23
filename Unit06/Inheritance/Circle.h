@@ -1,13 +1,23 @@
-#pragma once
-#include "Shape.h"
-// ²¹È«CircleÀà£¬´ÓShape¼Ì³Ð
+import <iostream>;
+import <string>;
+import module1;
+
+using std::string;
+using namespace std::string_literals;
+
+export module module2;
+export class Circle;
+
 class Circle : public Shape {
-  double radius;
+	double radius;
 
 public:
-  Circle();
-  Circle(double radius_, Color color_, bool filled_);
-  double getArea();
-  double getRadius() const;
-  void setRadius(double radius);
+	Circle();
+	Circle(double radius_, Color color_, bool filled_);
+
+	virtual double getArea() override;
+	double getRadius() const;
+	void setRadius(double radius);
+
+	string toString();
 };
